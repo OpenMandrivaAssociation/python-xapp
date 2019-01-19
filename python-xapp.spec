@@ -12,6 +12,12 @@ Group:          Development/Python
 
 BuildArch:      noarch
 
+BuildRequires: pkgconfig(python3)
+BuildRequires: python3egg(setuptools)
+
+Requires:      python3egg(psutil)
+
+
 %description
 %{sum}.
 
@@ -22,16 +28,6 @@ BuildRequires: pythonegg(setuptools)
 Requires:      pythonegg(psutil)
 
 %description -n python2-xapp
-%{sum}.
-
-
-%package -n python3-xapp
-Summary:       %{sum}
-BuildRequires: pkgconfig(python3)
-BuildRequires: python3egg(setuptools)
-Requires:      python3egg(psutil)
-
-%description -n python3-xapp
 %{sum}.
 
 
@@ -53,7 +49,7 @@ python3 setup.py install --root=%{buildroot}
 %{python2_sitelib}/xapp/
 %{python2_sitelib}/python_xapp-%{version}-py%{python2_version}.egg-info
 
-%files -n python3-xapp
+%files
 %doc COPYING README TODO AUTHORS
 %{python3_sitelib}/xapp/
 %{python3_sitelib}/python_xapp-%{version}-py%{python3_version}.egg-info
