@@ -7,7 +7,7 @@ Summary:        %{sum}
 
 License:        GPLv2
 URL:            https://github.com/linuxmint/%{name}
-Source0:        %url/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        %url/archive/%{version}.tar.gz
 Group:          Development/Python
 
 BuildArch:      noarch
