@@ -1,8 +1,8 @@
 %global sum Python bindings for xapps
 
 Name:           python-xapp
-Version:        1.4.0
-Release:        1
+Version:	1.6.0
+Release:	1
 Summary:        %{sum}
 
 License:        GPLv2
