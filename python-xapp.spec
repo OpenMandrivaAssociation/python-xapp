@@ -1,13 +1,13 @@
 %global sum Python bindings for xapps
 
 Name:           python-xapp
-Version:	1.6.0
+Version:	1.8.0
 Release:	1
 Summary:        %{sum}
 
 License:        GPLv2
 URL:            https://github.com/linuxmint/%{name}
-Source0:        %url/archive/%{version}.tar.gz
+Source0:        https://github.com/linuxmint/archive/%{version}/%{name}-%{version}.tar.gz
 Group:          Development/Python
 
 BuildArch:      noarch
