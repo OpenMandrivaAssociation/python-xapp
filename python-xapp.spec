@@ -2,7 +2,7 @@
 
 Name:           python-xapp
 Version:	1.8.1
-Release:	1
+Release:	2
 Summary:        %{sum}
 
 License:        GPLv2
@@ -53,4 +53,3 @@ python3 setup.py install --root=%{buildroot}
 %doc COPYING README TODO AUTHORS
 %{python3_sitelib}/xapp/
 %{python3_sitelib}/python_xapp-%{version}-py%{python3_version}.egg-info
-
