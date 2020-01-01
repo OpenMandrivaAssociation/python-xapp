@@ -25,7 +25,7 @@ Requires:      python3dist(psutil)
 Summary:       %{sum}
 BuildRequires: pkgconfig(python2)
 BuildRequires: pythonegg(setuptools)
-Requires:      pythonegg(psutil)
+Requires:      python2dist(psutil)
 
 %description -n python2-xapp
 %{sum}.
