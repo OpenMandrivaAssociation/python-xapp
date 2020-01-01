@@ -15,7 +15,7 @@ BuildArch:      noarch
 BuildRequires: pkgconfig(python3)
 BuildRequires: python3egg(setuptools)
 
-Requires:      python3egg(psutil)
+Requires:      python3dist(psutil)
 
 
 %description
