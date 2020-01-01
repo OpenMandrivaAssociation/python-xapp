@@ -2,7 +2,7 @@
 
 Name:           python-xapp
 Version:	1.8.1
-Release:	2
+Release:	3
 Summary:        %{sum}
 
 License:        GPLv2
@@ -30,10 +30,9 @@ Requires:      pythonegg(psutil)
 %description -n python2-xapp
 %{sum}.
 
-
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 sed -i -e 's!1.0.0!%{version}!g' setup.py
 
 %build
