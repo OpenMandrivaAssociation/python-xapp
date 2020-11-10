@@ -1,13 +1,13 @@
 %global sum Python bindings for xapps
 
 Name:           python-xapp
-Version:	1.8.1
-Release:	3
+Version:	2.0.1
+Release:	1
 Summary:        %{sum}
 
 License:        GPLv2
 URL:            https://github.com/linuxmint/%{name}
-Source0:        https://github.com/linuxmint/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/linuxmint/python-xapp/archive/%{version}/%{name}-%{version}.tar.gz
 Group:          Development/Python
 
 BuildArch:      noarch
@@ -23,15 +23,15 @@ Requires:      python3dist(psutil)
 
 %package -n python2-xapp
 Summary:       %{sum}
-BuildRequires: pkgconfig(python2)
-BuildRequires: pythonegg(setuptools)
+BuildRequires: pkgconfig(python)
+BuildRequires: python2dist(setuptools)
 Requires:      python2dist(psutil)
 
 %description -n python2-xapp
 %{sum}.
 
 %prep
-%setup -q
+%autosetup -n python3-xapp-%{version}
 %autopatch -p1
 sed -i -e 's!1.0.0!%{version}!g' setup.py
 
