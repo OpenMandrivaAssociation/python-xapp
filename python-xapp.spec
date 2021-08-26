@@ -7,7 +7,7 @@ Summary:        %{sum}
 
 License:        GPLv2
 URL:            https://github.com/linuxmint/%{name}
-Source0:        https://github.com/linuxmint/python3-xapp/archive/%{version}/%{name}3-%{version}.tar.gz
+Source0:        https://github.com/linuxmint/python3-xapp/archive/%{version}/python3-xapp-%{version}.tar.gz
 Group:          Development/Python
 
 BuildArch:      noarch
