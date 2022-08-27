@@ -2,7 +2,7 @@
 
 Name:           python-xapp
 Version:	2.2.2
-Release:	1
+Release:	2
 Summary:        %{sum}
 
 License:        GPLv2
