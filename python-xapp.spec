@@ -1,8 +1,8 @@
 %global sum Python bindings for xapps
 
 Name:           python-xapp
-Version:	2.2.2
-Release:	2
+Version:	2.4.0
+Release:	1
 Summary:        %{sum}
 
 License:        GPLv2
@@ -11,7 +11,7 @@ Source0:        https://github.com/linuxmint/python3-xapp/archive/%{version}/pyt
 Group:          Development/Python
 
 BuildArch:      noarch
-
+BuildRequires: meson
 BuildRequires: pkgconfig(python3)
 BuildRequires: python3egg(setuptools)
 
@@ -36,12 +36,11 @@ Requires:      python2dist(psutil)
 sed -i -e 's!1.0.0!%{version}!g' setup.py
 
 %build
-python2 setup.py build
-python3 setup.py build
+%meson
+%meson_build
 
 %install
-python2 setup.py install --root=%{buildroot}
-python3 setup.py install --root=%{buildroot}
+%meson_install
 
 %files -n python2-xapp
 %doc COPYING README TODO AUTHORS
