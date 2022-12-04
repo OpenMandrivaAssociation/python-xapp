@@ -44,7 +44,7 @@ Requires:      python2dist(psutil)
 %files -n python2-xapp
 %doc COPYING README TODO AUTHORS
 %{python2_sitelib}/xapp/
-%{python2_sitelib}/python_xapp-%{version}-py%{python2_version}.egg-info
+#{python2_sitelib}/python_xapp-%{version}-py%{python2_version}.egg-info
 
 %files
 %doc COPYING README TODO AUTHORS
