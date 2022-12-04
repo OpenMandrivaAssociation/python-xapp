@@ -21,15 +21,6 @@ Requires:      python3dist(psutil)
 %description
 %{sum}.
 
-%package -n python2-xapp
-Summary:       %{sum}
-BuildRequires: pkgconfig(python)
-BuildRequires: python2dist(setuptools)
-Requires:      python2dist(psutil)
-
-%description -n python2-xapp
-%{sum}.
-
 %prep
 %autosetup -n python3-xapp-%{version}
 %autopatch -p1
@@ -41,12 +32,7 @@ Requires:      python2dist(psutil)
 %install
 %meson_install
 
-%files -n python2-xapp
-%doc COPYING README TODO AUTHORS
-#{python2_sitelib}/xapp/
-#{python2_sitelib}/python_xapp-%{version}-py%{python2_version}.egg-info
 
 %files
 %doc COPYING README TODO AUTHORS
 %{python3_sitelib}/xapp/
-#{python3_sitelib}/python_xapp-%{version}-py%{python3_version}.egg-info
