@@ -33,7 +33,6 @@ Requires:      python2dist(psutil)
 %prep
 %autosetup -n python3-xapp-%{version}
 %autopatch -p1
-sed -i -e 's!1.0.0!%{version}!g' setup.py
 
 %build
 %meson
