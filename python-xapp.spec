@@ -49,4 +49,4 @@ Requires:      python2dist(psutil)
 %files
 %doc COPYING README TODO AUTHORS
 %{python3_sitelib}/xapp/
-%{python3_sitelib}/python_xapp-%{version}-py%{python3_version}.egg-info
+#{python3_sitelib}/python_xapp-%{version}-py%{python3_version}.egg-info
