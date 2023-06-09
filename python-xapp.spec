@@ -1,7 +1,7 @@
 %global sum Python bindings for xapps
 
 Name:           python-xapp
-Version:	2.4.0
+Version:	2.4.1
 Release:	1
 Summary:        %{sum}
 
