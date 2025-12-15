@@ -1,29 +1,31 @@
 %global sum Python bindings for xapps
 
-Name:           python-xapp
-Version:	2.4.2
+Name:		python-xapp
+Version:	3.0.1
 Release:	1
-Summary:        %{sum}
+Summary:	%{sum}
+License:	GPLv2
+Group:		Development/Python
+URL:		https://github.com/linuxmint/%{name}
+Source0:	https://github.com/linuxmint/python3-xapp/archive/%{version}/python3-xapp-%{version}.tar.gz
+BuildArch:	noarch
 
-License:        GPLv2
-URL:            https://github.com/linuxmint/%{name}
-Source0:        https://github.com/linuxmint/python3-xapp/archive/%{version}/python3-xapp-%{version}.tar.gz
-Group:          Development/Python
-
-BuildArch:      noarch
-BuildRequires: meson
-BuildRequires: pkgconfig(python3)
-BuildRequires: python3egg(setuptools)
-
-Requires:      python3dist(psutil)
+BuildRequires:	gettext
+BuildRequires:	meson
+BuildRequires:	ninja
+BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
+Requires:		python%{pyver}dist(psutil)
 
 
 %description
 %{sum}.
 
 %prep
-%autosetup -n python3-xapp-%{version}
-%autopatch -p1
+%autosetup -n python3-xapp-%{version} -p1
 
 %build
 %meson
@@ -32,7 +34,9 @@ Requires:      python3dist(psutil)
 %install
 %meson_install
 
+%find_lang %{name}
 
-%files
-%doc COPYING README TODO AUTHORS
-%{python3_sitelib}/xapp/
+%files -f %{name}.lang
+%doc README
+%license COPYING
+%{python_sitelib}/xapp/
