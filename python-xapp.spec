@@ -1,7 +1,7 @@
 %define module xapp
 
 Name:		python-xapp
-Version:	3.0.5
+Version:	3.0.6
 Release:	1
 Summary:	Python bindings for xapps
 License:	GPLv2
